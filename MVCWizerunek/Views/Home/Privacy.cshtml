@@ -1,0 +1,42 @@
+﻿@{ 
+    string newfilename = "";
+    string imagefile = "";
+
+
+
+    newfilename = Guid.NewGuid().ToString();
+    imagefile = Path.ToString();
+
+
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Upload</title>
+</head>
+
+<body>
+    <form  method="post" enctype="multipart/form-data">
+
+        <fieldset>
+            <legend> Upload Image </legend>
+            <label for="Image">Image</label>
+            <input type="file" name="Image" size="35" />
+            <br />
+            <input type="submit" value="Upload" />
+        </fieldset>
+
+    </form>
+    <h1>Uploaded Image</h1>
+
+   @if(imagefile!=null)
+   {
+       <a>@imagefile</a>
+   }
+
+        <img src="" alt="image" /></div>
+    
+</body>
+
+</html>

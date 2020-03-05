@@ -1,0 +1,55 @@
+﻿@model MVCWizerunek.Models.Studenci
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Studenci</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="imie" class="control-label"></label>
+                <input asp-for="imie" class="form-control" />
+                <span asp-validation-for="imie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="nazwisko" class="control-label"></label>
+                <input asp-for="nazwisko" class="form-control" />
+                <span asp-validation-for="nazwisko" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="data_urodzenia" class="control-label"></label>
+                <input asp-for="data_urodzenia" class="form-control" />
+                <span asp-validation-for="data_urodzenia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="plec" class="control-label"></label>
+                <input asp-for="plec" class="form-control" />
+                <span asp-validation-for="plec" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="miasto" class="control-label"></label>
+                <input asp-for="miasto" class="form-control" />
+                <span asp-validation-for="miasto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="liczba_dzieci" class="control-label"></label>
+                <input asp-for="liczba_dzieci" class="form-control" />
+                <span asp-validation-for="liczba_dzieci" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

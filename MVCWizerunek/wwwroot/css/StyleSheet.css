@@ -1,0 +1,101 @@
+﻿body {
+    background-color: #4f6272;
+}
+
+nav {
+    background-color: #42515e;
+}
+
+img {
+    align-content: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+h2 {
+    color: black;
+    font-size: 34px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-stretch: extra-condensed;
+    font-variant-alternates: ornaments();
+}
+
+#container {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+
+#foto {
+    width: 290px;
+    align-items: center;
+    float: left;
+    padding: 20px;
+}
+
+.descr {
+    width: 650px;
+    height: auto;
+    float: left;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#logo {
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+#footer {
+    clear: both;
+}
+
+
+#film {
+    align-items: inherit;
+}
+
+.namee {
+    float: left;
+    text-align: right;
+    width: 20%;
+}
+
+.social {
+    float: left;
+    width: 75%;
+    text-align: right;
+    padding-right: 1%;
+}
+
+.con {
+    width: 100%;
+}
+
+.f {
+    clear: both;
+}
+
+.download {
+    
+    background-color: #313d47;
+    border: gold;
+    cursor: pointer;
+    font-size: 13px;
+    color: black;
+    height: 90%;
+    font-family: $main-font;
+    margin: 10px;
+    vertical-align: central;
+    
+}

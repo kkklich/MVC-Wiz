@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MVCWizerunek.Program>
+
+@{
+    ViewData["Title"] = "Kontakt";
+}
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Krzysztof Klich Kontakt</title>
+        <link href="~/css/Arkusz.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2>Kontakt</h2>
+
+        <a>Zapraszam do kontaku ze mną</a>
+        <a>@ViewData["imie"]</a>
+        <form asp-controller="Home" asp-action="send" method="post">
+            Podaj e-mail:</br> <input type="email" name="email" placeholder="e-mail" required /></br></br>
+            Temat:</br><input type="text" name="subject" placeholder="Temat" required /></br></br>
+            Wiadomość</br><textarea name="messeage" placeholder="Wiadomość" rows="10" cols="50" required></textarea> </br>
+
+            <input type="submit" value="Wyślij" />
+
+        </form>
+
+    </body>
+    </html>

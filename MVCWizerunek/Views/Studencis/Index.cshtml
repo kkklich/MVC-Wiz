@@ -1,0 +1,77 @@
+﻿@model IEnumerable<MVCWizerunek.Models.Studenci>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+    <link href="~/css/Arkusz.css" rel="stylesheet" />
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                <a> @Html.ActionLink(@Html.DisplayNameFor(model => model.id), "Index", "Studencis", new { nazwa = "select * from studenci order by id desc" ,n="ad"})  </a>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imie)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nazwisko)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.data_urodzenia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.plec)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.miasto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.liczba_dzieci)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.imie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nazwisko)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.data_urodzenia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.plec)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.miasto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.liczba_dzieci)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+        }
+
+        <a>@ViewData["nazwa"] </a>asdasd
+
+    </tbody>
+</table>

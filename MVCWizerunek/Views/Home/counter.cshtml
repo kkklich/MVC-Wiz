@@ -1,0 +1,61 @@
+﻿
+
+@model IEnumerable<MVCWizerunek.Models.Licznik>
+
+
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krzysztof Klich Kontakt</title>
+    <link href="~/css/Arkusz.css" rel="stylesheet" />
+</head>
+<body>
+    <h2>Calculator</h2>
+
+
+
+    <form method="post" asp-controller="Home" asp-action="counter" name="calc" action-name="call">
+
+        <input type="text" id="numbera" name="a" value="@ViewData["a"]" class="form-control" /><br />
+
+        <input type="text" id="numberb" name="b" value="@ViewData["b"]" class="form-control" /><br />
+
+        <input type="submit" name="Cal" value="Add" />
+        <input type="submit" name="Cal" value="Sub" class="btn btn-outline-primary" />
+        <input type="submit" name="Cal" value="Mul" class="btn btn-danger" />
+        <input type="submit" name="Cal" value="Div" class="btn btn-secondary" />
+
+        <input type="text" class="form-control" value="@ViewBag.result" />
+
+    </form>
+
+
+    <form asp-controller="Home" asp-action="coun" method="post" action-name="count">
+
+        <input type="submit" name="Count" value="Licz" class="btn btn-danger" />
+
+    </form>
+
+
+
+    <a>@ViewData["ab"]</a>
+
+
+    @{        for (int i = 0; i < 10; i++)
+        {
+            <a>@i</a><br />
+        }
+
+    }
+
+
+
+
+
+
+
+
+</body>
+</html>
